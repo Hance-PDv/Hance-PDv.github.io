@@ -318,15 +318,9 @@
     }
 
     @keyframes livePulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65);
-      }
-      70% {
-        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-      }
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65); }
+      70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
     }
 
     hr {
@@ -389,23 +383,10 @@
       cursor: grabbing;
     }
 
-    .screenshots-scroll::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    .screenshots-scroll::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 999px;
-    }
-
-    .screenshots-scroll::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.16);
-      border-radius: 999px;
-    }
-
-    .screenshots-scroll::-webkit-scrollbar-thumb:hover {
-      background: rgba(59, 130, 246, 0.5);
-    }
+    .screenshots-scroll::-webkit-scrollbar { height: 6px; }
+    .screenshots-scroll::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.03); border-radius: 999px; }
+    .screenshots-scroll::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.16); border-radius: 999px; }
+    .screenshots-scroll::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.5); }
 
     .screenshot-item {
       flex: 0 0 210px;
@@ -537,13 +518,8 @@
     }
 
     @media (max-width: 640px) {
-      h1 {
-        font-size: 32px;
-      }
-
-      .screenshot-item {
-        flex: 0 0 175px;
-      }
+      h1 { font-size: 32px; }
+      .screenshot-item { flex: 0 0 175px; }
     }
   </style>
 </head>
@@ -649,38 +625,14 @@
     <section>
       <h2>Screenshots</h2>
       <div id="screenshotsScroll" class="screenshots-scroll">
-        <div class="screenshot-item">
-          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/1NoxSound.png" alt="Home" draggable="false" />
-          <b>Home</b>
-        </div>
-        <div class="screenshot-item">
-          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/2NoxSound.png" alt="Discovery" draggable="false" />
-          <b>Discovery</b>
-        </div>
-        <div class="screenshot-item">
-          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/3NoxSound.png" alt="Search" draggable="false" />
-          <b>Search</b>
-        </div>
-        <div class="screenshot-item">
-          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/4NoxSound.png" alt="Player" draggable="false" />
-          <b>Player</b>
-        </div>
-        <div class="screenshot-item">
-          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/5NoxSound.png" alt="Lyrics" draggable="false" />
-          <b>Lyrics</b>
-        </div>
-        <div class="screenshot-item">
-          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/6NoxSound.png" alt="Library" draggable="false" />
-          <b>Library</b>
-        </div>
-        <div class="screenshot-item">
-          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/7NoxSound.png" alt="Download Manager" draggable="false" />
-          <b>Download Manager</b>
-        </div>
-        <div class="screenshot-item">
-          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/8NoxSound.png" alt="Setting" draggable="false" />
-          <b>Setting</b>
-        </div>
+        <div class="screenshot-item"><img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/1NoxSound.png" alt="Home" draggable="false" /><b>Home</b></div>
+        <div class="screenshot-item"><img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/2NoxSound.png" alt="Discovery" draggable="false" /><b>Discovery</b></div>
+        <div class="screenshot-item"><img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/3NoxSound.png" alt="Search" draggable="false" /><b>Search</b></div>
+        <div class="screenshot-item"><img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/4NoxSound.png" alt="Player" draggable="false" /><b>Player</b></div>
+        <div class="screenshot-item"><img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/5NoxSound.png" alt="Lyrics" draggable="false" /><b>Lyrics</b></div>
+        <div class="screenshot-item"><img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/6NoxSound.png" alt="Library" draggable="false" /><b>Library</b></div>
+        <div class="screenshot-item"><img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/7NoxSound.png" alt="Download Manager" draggable="false" /><b>Download Manager</b></div>
+        <div class="screenshot-item"><img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/8NoxSound.png" alt="Setting" draggable="false" /><b>Setting</b></div>
       </div>
     </section>
 
@@ -698,373 +650,252 @@
   </div>
 
   <script>
-    const fallbackReleasesPage = "https://github.com/Hance-PDv/Nox_sound/releases/latest";
-    const downloadBtn = document.getElementById('downloadBtn');
-    const downloadBtnVersion = document.getElementById('downloadBtnVersion');
-    const versionMeta = document.getElementById('versionMeta');
-    const downloadsStatsPill = document.getElementById('downloadsStatsPill');
-    const totalDownloadsCountEl = document.getElementById('totalDownloadsCount');
-    const starsStatsPill = document.getElementById('starsStatsPill');
-    const repoStarsCountEl = document.getElementById('repoStarsCount');
-    const screenshotsScroll = document.getElementById('screenshotsScroll');
-    const latestVersionToggle = document.getElementById('latestVersionToggle');
-    const latestVersionList = document.getElementById('latestVersionList');
-    const latestVersionChevron = document.getElementById('latestVersionChevron');
-    const CACHE_KEY_STATE = 'nox_sound_release_state_v5';
-    const RELEASES_API_URL = 'https://api.github.com/repos/Hance-PDv/Nox_sound/releases?per_page=100';
-    const REPO_API_URL = 'https://api.github.com/repos/Hance-PDv/Nox_sound';
-    const LIVE_POLL_INTERVAL_MS = 90000;
+    const FALLBACK_URL = "https://github.com/Hance-PDv/Nox_sound/releases/latest";
+    const CACHE_KEY = "nox_sound_gh_cache_v6";
+    const CACHE_TTL_MS = 10 * 60 * 1000;
+    const MIN_FETCH_GAP_MS = 3 * 60 * 1000;
+    const RELEASES_URL = "https://api.github.com/repos/Hance-PDv/Nox_sound/releases?per_page=50";
+    const REPO_URL = "https://api.github.com/repos/Hance-PDv/Nox_sound";
+
+    const $ = (id) => document.getElementById(id);
+    const downloadBtn = $("downloadBtn");
+    const downloadBtnVersion = $("downloadBtnVersion");
+    const versionMeta = $("versionMeta");
+    const downloadsStatsPill = $("downloadsStatsPill");
+    const totalDownloadsCountEl = $("totalDownloadsCount");
+    const starsStatsPill = $("starsStatsPill");
+    const repoStarsCountEl = $("repoStarsCount");
+    const screenshotsScroll = $("screenshotsScroll");
+    const latestVersionToggle = $("latestVersionToggle");
+    const latestVersionList = $("latestVersionList");
+    const latestVersionChevron = $("latestVersionChevron");
 
     let displayedDownloads = 0;
-    let counterAnimFrame = null;
-    let isFetchingReleases = false;
-    let hasRenderedInitial = false;
+    let counterRaf = null;
+    let inFlight = null;
+    let hasRendered = false;
 
     if (latestVersionToggle && latestVersionList) {
-      latestVersionToggle.addEventListener('click', () => {
-        const isOpen = latestVersionList.classList.toggle('open');
-        latestVersionToggle.setAttribute('aria-expanded', String(isOpen));
-        if (latestVersionChevron) {
-          latestVersionChevron.textContent = isOpen ? '−' : '+';
-        }
+      latestVersionToggle.addEventListener("click", () => {
+        const open = latestVersionList.classList.toggle("open");
+        latestVersionToggle.setAttribute("aria-expanded", String(open));
+        if (latestVersionChevron) latestVersionChevron.textContent = open ? "−" : "+";
       });
     }
 
     if (screenshotsScroll) {
-      let isDown = false;
-      let startX = 0;
-      let scrollStart = 0;
-      let velocity = 0;
-      let lastX = 0;
-      let lastTime = 0;
-      let momentumId = null;
+      let down = false, startX = 0, scrollStart = 0, vel = 0, lastX = 0, lastT = 0, rafId = null;
+      const stop = () => { if (rafId) { cancelAnimationFrame(rafId); rafId = null; } };
+      const coast = () => {
+        stop();
+        const step = () => {
+          if (Math.abs(vel) < 0.3) return;
+          screenshotsScroll.scrollLeft -= vel;
+          vel *= 0.94;
+          rafId = requestAnimationFrame(step);
+        };
+        rafId = requestAnimationFrame(step);
+      };
 
-      function stopMomentum() {
-        if (momentumId) {
-          cancelAnimationFrame(momentumId);
-          momentumId = null;
-        }
-      }
-
-      function startMomentum() {
-        stopMomentum();
-        function step() {
-          if (Math.abs(velocity) < 0.3) return;
-          screenshotsScroll.scrollLeft -= velocity;
-          velocity *= 0.94;
-          momentumId = requestAnimationFrame(step);
-        }
-        momentumId = requestAnimationFrame(step);
-      }
-
-      screenshotsScroll.addEventListener('mousedown', (e) => {
+      screenshotsScroll.addEventListener("mousedown", (e) => {
         if (e.button !== 0) return;
-        stopMomentum();
-        isDown = true;
-        screenshotsScroll.classList.add('is-dragging');
-        startX = e.pageX;
-        lastX = e.pageX;
-        lastTime = performance.now();
+        stop();
+        down = true;
+        screenshotsScroll.classList.add("is-dragging");
+        startX = lastX = e.pageX;
+        lastT = performance.now();
         scrollStart = screenshotsScroll.scrollLeft;
-        velocity = 0;
+        vel = 0;
       });
 
-      window.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
+      window.addEventListener("mousemove", (e) => {
+        if (!down) return;
         e.preventDefault();
         const now = performance.now();
-        const dt = Math.max(now - lastTime, 1);
-        const dx = e.pageX - lastX;
-        velocity = (dx / dt) * 16;
+        const dt = Math.max(now - lastT, 1);
+        vel = ((e.pageX - lastX) / dt) * 16;
         lastX = e.pageX;
-        lastTime = now;
+        lastT = now;
         screenshotsScroll.scrollLeft = scrollStart - (e.pageX - startX);
       });
 
-      window.addEventListener('mouseup', () => {
-        if (!isDown) return;
-        isDown = false;
-        screenshotsScroll.classList.remove('is-dragging');
-        startMomentum();
+      window.addEventListener("mouseup", () => {
+        if (!down) return;
+        down = false;
+        screenshotsScroll.classList.remove("is-dragging");
+        coast();
       });
 
-      screenshotsScroll.addEventListener('wheel', (e) => {
+      screenshotsScroll.addEventListener("wheel", (e) => {
         if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
           e.preventDefault();
-          stopMomentum();
+          stop();
           screenshotsScroll.scrollLeft += e.deltaY * 1.4;
         }
       }, { passive: false });
     }
 
-    function formatVersion(tag) {
-      if (!tag) return "";
-      return `v${String(tag).replace(/^v/i, '')}`;
-    }
+    const fmtVer = (tag) => tag ? `v${String(tag).replace(/^v/i, "")}` : "";
+    const fmtMb = (bytes) => bytes > 0 ? `${(bytes / (1024 * 1024)).toFixed(1)} MB` : "";
+    const verParts = (tag) => String(tag || "").trim().replace(/^v/i, "").split("-")[0].split(".")
+      .map((p) => { const n = parseInt(p.replace(/\D/g, ""), 10); return Number.isNaN(n) ? 0 : n; });
 
-    function parseVersionParts(tag) {
-      const cleaned = String(tag || '').trim().replace(/^v/i, '').split('-')[0];
-      return cleaned.split('.').map(part => {
-        const num = parseInt(part.replace(/\D/g, ''), 10);
-        return isNaN(num) ? 0 : num;
-      });
-    }
-
-    function compareVersions(tagA, tagB) {
-      const a = parseVersionParts(tagA);
-      const b = parseVersionParts(tagB);
-      const maxLen = Math.max(a.length, b.length);
-      for (let i = 0; i < maxLen; i++) {
-        const numA = a[i] || 0;
-        const numB = b[i] || 0;
-        if (numA !== numB) return numA - numB;
+    function cmpVer(a, b) {
+      const pa = verParts(a), pb = verParts(b), len = Math.max(pa.length, pb.length);
+      for (let i = 0; i < len; i++) {
+        const d = (pa[i] || 0) - (pb[i] || 0);
+        if (d !== 0) return d;
       }
       return 0;
     }
 
-    function formatSizeMb(bytes) {
-      if (!bytes || bytes <= 0) return "";
-      return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+    function showPill(pill) {
+      if (!pill) return;
+      pill.style.display = "inline-flex";
+      requestAnimationFrame(() => pill.classList.add("visible"));
     }
 
-    function animateDownloadCounter(targetTotal, isLiveUpdate = false) {
+    function animateDownloads(target, live = false) {
       if (!downloadsStatsPill || !totalDownloadsCountEl) return;
-      const finalValue = Math.max(0, Math.floor(Number(targetTotal) || 0));
-
-      downloadsStatsPill.style.display = 'inline-flex';
-      requestAnimationFrame(() => {
-        downloadsStatsPill.classList.add('visible');
-      });
-
-      if (isLiveUpdate && finalValue === displayedDownloads) {
-        return;
+      const goal = Math.max(0, Math.floor(Number(target) || 0));
+      showPill(downloadsStatsPill);
+      if (live && goal === displayedDownloads) return;
+      if (live && goal > displayedDownloads) {
+        downloadsStatsPill.classList.add("pulse");
+        setTimeout(() => downloadsStatsPill.classList.remove("pulse"), 900);
       }
+      if (counterRaf) { cancelAnimationFrame(counterRaf); counterRaf = null; }
 
-      if (isLiveUpdate && finalValue > displayedDownloads) {
-        downloadsStatsPill.classList.add('pulse');
-        setTimeout(() => {
-          downloadsStatsPill.classList.remove('pulse');
-        }, 900);
-      }
-
-      if (counterAnimFrame) {
-        cancelAnimationFrame(counterAnimFrame);
-        counterAnimFrame = null;
-      }
-
-      const startValue = displayedDownloads;
-      const diff = finalValue - startValue;
-      const duration = isLiveUpdate ? 750 : 1400;
-      const startTime = performance.now();
-
-      function step(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 4);
-        const current = Math.round(startValue + diff * eased);
-        displayedDownloads = current;
-        totalDownloadsCountEl.textContent = current.toLocaleString('en-US');
-
-        if (progress < 1) {
-          counterAnimFrame = requestAnimationFrame(step);
-        } else {
-          displayedDownloads = finalValue;
-          totalDownloadsCountEl.textContent = finalValue.toLocaleString('en-US');
-          counterAnimFrame = null;
-        }
-      }
-
-      counterAnimFrame = requestAnimationFrame(step);
+      const start = displayedDownloads, diff = goal - start, dur = live ? 700 : 1200, t0 = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - t0) / dur, 1);
+        const cur = Math.round(start + diff * (1 - Math.pow(1 - p, 4)));
+        displayedDownloads = cur;
+        totalDownloadsCountEl.textContent = cur.toLocaleString("en-US");
+        if (p < 1) counterRaf = requestAnimationFrame(tick);
+        else { displayedDownloads = goal; totalDownloadsCountEl.textContent = goal.toLocaleString("en-US"); counterRaf = null; }
+      };
+      counterRaf = requestAnimationFrame(tick);
     }
 
-    function renderRepoStars(stars) {
-      if (!starsStatsPill || !repoStarsCountEl) return;
-      const finalStars = Math.max(0, Math.floor(Number(stars) || 0));
-      repoStarsCountEl.textContent = finalStars.toLocaleString('en-US');
-      starsStatsPill.style.display = 'inline-flex';
-      requestAnimationFrame(() => {
-        starsStatsPill.classList.add('visible');
-      });
-    }
-
-    function renderVersionsList(previousVersions) {
+    function renderPreviousVersions(list) {
       if (!latestVersionList) return;
-      if (!Array.isArray(previousVersions) || previousVersions.length === 0) {
+      if (!Array.isArray(list) || list.length === 0) {
         latestVersionList.innerHTML = '<div class="version-row-meta">No previous versions available.</div>';
         return;
       }
-
-      latestVersionList.innerHTML = previousVersions.map((item) => {
-        const metaParts = [item.sizeText, typeof item.downloads === 'number' ? `${item.downloads.toLocaleString('en-US')} downloads` : ''].filter(Boolean);
-        return `
-          <div class="version-row">
-            <div class="version-row-info">
-              <span class="version-row-tag">${item.version}</span>
-              <span class="version-row-meta">${metaParts.join(' • ') || 'Android APK'}</span>
-            </div>
-            <a href="${item.url}" target="_self" class="version-row-dl version-dl-btn">Download</a>
+      latestVersionList.innerHTML = list.map((v) => `
+        <div class="version-row">
+          <div class="version-row-info">
+            <span class="version-row-tag">${v.version}</span>
+            <span class="version-row-meta">${v.sizeText || "Android APK"}</span>
           </div>
-        `;
-      }).join('');
+          <a href="${v.url}" target="_self" class="version-row-dl">Download</a>
+        </div>
+      `).join("");
     }
 
-    function calculateTotalDownloads(releases) {
-      if (!Array.isArray(releases)) return 0;
-      return releases.reduce((total, rel) => {
-        if (!rel || !Array.isArray(rel.assets)) return total;
-        const relSum = rel.assets.reduce((sum, asset) => {
-          return sum + (asset && typeof asset.download_count === 'number' ? asset.download_count : 0);
-        }, 0);
-        return total + relSum;
-      }, 0);
-    }
-
-    function applyReleaseState(state, isLiveUpdate = false) {
+    function applyState(state, live = false) {
       if (!state) return;
-
-      if (typeof state.totalDownloads === 'number') {
-        animateDownloadCounter(state.totalDownloads, isLiveUpdate);
+      if (typeof state.totalDownloads === "number") animateDownloads(state.totalDownloads, live);
+      if (typeof state.stars === "number" && starsStatsPill && repoStarsCountEl) {
+        repoStarsCountEl.textContent = Math.max(0, Math.floor(state.stars)).toLocaleString("en-US");
+        showPill(starsStatsPill);
       }
-
-      if (typeof state.stars === 'number') {
-        renderRepoStars(state.stars);
-      }
-
       if (state.latest) {
-        if (downloadBtnVersion && state.latest.version) {
-          downloadBtnVersion.textContent = state.latest.version;
-        }
+        if (downloadBtnVersion && state.latest.version) downloadBtnVersion.textContent = state.latest.version;
         if (downloadBtn && state.latest.url) {
           downloadBtn.href = state.latest.url;
-          downloadBtn.target = '_self';
-          downloadBtn.removeAttribute('download');
+          downloadBtn.target = "_self";
+          downloadBtn.removeAttribute("download");
         }
         if (versionMeta) {
-          versionMeta.textContent = state.latest.sizeText
-            ? `Android APK • ${state.latest.sizeText}`
-            : "Android APK • Latest Release";
+          versionMeta.textContent = state.latest.sizeText ? `Android APK • ${state.latest.sizeText}` : "Android APK • Latest Release";
         }
       }
-
-      if (Array.isArray(state.previousVersions)) {
-        renderVersionsList(state.previousVersions);
-      }
+      if (Array.isArray(state.previousVersions)) renderPreviousVersions(state.previousVersions);
     }
 
-    function hydrateFromCache() {
-      try {
-        const cached = JSON.parse(localStorage.getItem(CACHE_KEY_STATE) || 'null');
-        if (cached && typeof cached === 'object') {
-          applyReleaseState(cached, false);
-          hasRenderedInitial = true;
-          return true;
-        }
-      } catch (e) {}
-      return false;
+    function readCache() {
+      try { return JSON.parse(localStorage.getItem(CACHE_KEY) || "null"); }
+      catch (_) { return null; }
     }
 
-    function fetchReleasesData() {
-      if (isFetchingReleases) return;
-      isFetchingReleases = true;
+    function writeCache(data) {
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ...data, ts: Date.now() })); }
+      catch (_) {}
+    }
 
-      Promise.all([
-        fetch(RELEASES_API_URL, { cache: 'no-cache' }).then(res => {
-          if (!res.ok) throw new Error('Releases fetch failed');
-          return res.json();
+    function syncGitHub(force = false) {
+      if (inFlight) return inFlight;
+      const cached = readCache();
+      const age = cached && typeof cached.ts === "number" ? Date.now() - cached.ts : Infinity;
+      if (!force && age < MIN_FETCH_GAP_MS) return Promise.resolve();
+
+      inFlight = Promise.all([
+        fetch(RELEASES_URL).then((r) => {
+          if (r.status === 403 || r.status === 429) throw new Error("rate_limited");
+          if (!r.ok) throw new Error("releases_error");
+          return r.json();
         }),
-        fetch(REPO_API_URL, { cache: 'no-cache' }).then(res => (res.ok ? res.json() : null)).catch(() => null)
+        fetch(REPO_URL).then((r) => (r.ok ? r.json() : null)).catch(() => null)
       ])
-        .then(([releases, repoInfo]) => {
-          const validReleases = (Array.isArray(releases) ? releases : [])
-            .filter(r => r && !r.draft && !r.prerelease);
+        .then(([releases, repo]) => {
+          const valid = (Array.isArray(releases) ? releases : []).filter((r) => r && !r.draft && !r.prerelease);
+          let totalDownloads = 0;
+          const apkItems = [];
 
-          const totalDownloads = calculateTotalDownloads(validReleases);
-          const stars = repoInfo && typeof repoInfo.stargazers_count === 'number'
-            ? repoInfo.stargazers_count
-            : (hasRenderedInitial ? undefined : 0);
-
-          const apkReleases = validReleases
-            .filter(rel => Array.isArray(rel.assets) && rel.assets.some(a => a && a.name && a.name.toLowerCase().endsWith('.apk')))
-            .sort((a, b) => compareVersions(b.tag_name, a.tag_name));
-
-          let latestState = null;
-          const allVersions = apkReleases.map(rel => {
-            const apkAsset = rel.assets.find(a => a && a.name && a.name.toLowerCase().endsWith('.apk'));
-            const ver = formatVersion(rel.tag_name);
-            const relDownloads = rel.assets.reduce((s, a) => s + (a && typeof a.download_count === 'number' ? a.download_count : 0), 0);
-            return {
-              version: ver,
-              url: apkAsset.browser_download_url || fallbackReleasesPage,
-              sizeText: formatSizeMb(apkAsset.size),
-              downloads: relDownloads
-            };
-          });
-
-          if (allVersions.length > 0) {
-            latestState = {
-              version: allVersions[0].version,
-              url: allVersions[0].url,
-              sizeText: allVersions[0].sizeText
-            };
+          for (const rel of valid) {
+            const assets = Array.isArray(rel.assets) ? rel.assets : [];
+            for (const a of assets) {
+              if (a && typeof a.download_count === "number") totalDownloads += a.download_count;
+            }
+            const apk = assets.find((a) => a && a.name && a.name.toLowerCase().endsWith(".apk"));
+            if (apk) {
+              apkItems.push({
+                tag: rel.tag_name,
+                version: fmtVer(rel.tag_name),
+                url: apk.browser_download_url || FALLBACK_URL,
+                sizeText: fmtMb(apk.size)
+              });
+            }
           }
 
-          const previousVersions = allVersions.slice(1);
+          apkItems.sort((a, b) => cmpVer(b.tag, a.tag));
+          const latest = apkItems[0] ? { version: apkItems[0].version, url: apkItems[0].url, sizeText: apkItems[0].sizeText } : null;
+          const previousVersions = apkItems.slice(1).map(({ version, url, sizeText }) => ({ version, url, sizeText }));
+          const stars = repo && typeof repo.stargazers_count === "number"
+            ? repo.stargazers_count
+            : (cached && typeof cached.stars === "number" ? cached.stars : 0);
 
-          const prevCached = (() => {
-            try { return JSON.parse(localStorage.getItem(CACHE_KEY_STATE) || 'null') || {}; }
-            catch (e) { return {}; }
-          })();
-
-          const newState = {
-            totalDownloads,
-            stars: typeof stars === 'number' ? stars : prevCached.stars,
-            latest: latestState,
-            previousVersions
-          };
-
-          try {
-            localStorage.setItem(CACHE_KEY_STATE, JSON.stringify(newState));
-          } catch (e) {}
-
-          applyReleaseState(newState, hasRenderedInitial);
-          hasRenderedInitial = true;
+          const nextState = { totalDownloads, stars, latest, previousVersions };
+          writeCache(nextState);
+          applyState(nextState, hasRendered);
+          hasRendered = true;
         })
         .catch(() => {
-          if (!hasRenderedInitial) {
-            downloadBtn.href = fallbackReleasesPage;
-            if (downloadsStatsPill) {
-              downloadsStatsPill.style.display = 'none';
-            }
-            if (starsStatsPill) {
-              starsStatsPill.style.display = 'none';
-            }
+          if (!hasRendered) {
+            if (downloadBtn) downloadBtn.href = FALLBACK_URL;
+            if (downloadsStatsPill) downloadsStatsPill.style.display = "none";
+            if (starsStatsPill) starsStatsPill.style.display = "none";
           }
         })
-        .finally(() => {
-          isFetchingReleases = false;
-        });
+        .finally(() => { inFlight = null; });
+
+      return inFlight;
     }
 
-    hydrateFromCache();
-    fetchReleasesData();
+    const initialCache = readCache();
+    if (initialCache && typeof initialCache === "object") {
+      applyState(initialCache, false);
+      hasRendered = true;
+    }
 
-    setInterval(() => {
-      if (!document.hidden) {
-        fetchReleasesData();
-      }
-    }, LIVE_POLL_INTERVAL_MS);
+    const isFresh = initialCache && typeof initialCache.ts === "number" && (Date.now() - initialCache.ts) < CACHE_TTL_MS;
+    if (!isFresh) syncGitHub(false);
 
-    document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) {
-        fetchReleasesData();
-      }
-    });
-
-    document.addEventListener('click', (e) => {
-      const link = e.target.closest('#downloadBtn, .version-dl-btn');
-      if (link) {
-        setTimeout(() => fetchReleasesData(), 4500);
-      }
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) syncGitHub(false);
     });
   </script>
 </body>
