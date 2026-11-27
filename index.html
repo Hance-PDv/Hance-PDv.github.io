@@ -212,87 +212,6 @@
       margin-top: 10px;
       font-size: 12px;
       color: var(--text-secondary);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .last-version-btn {
-      background: var(--card-bg);
-      color: var(--text-primary);
-      border: 1px solid var(--border-color);
-      border-radius: 999px;
-      padding: 2px 10px;
-      font-size: 11.5px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: border-color 0.2s ease, background 0.2s ease;
-    }
-
-    .last-version-btn:hover {
-      border-color: rgba(59, 130, 246, 0.45);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .last-version-panel {
-      display: none;
-      margin: 14px auto 0 auto;
-      max-width: 480px;
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 16px 18px;
-      text-align: left;
-      backdrop-filter: blur(10px);
-    }
-
-    .last-version-panel.open {
-      display: block;
-    }
-
-    .last-version-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-
-    .last-version-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .last-version-close {
-      background: transparent;
-      color: var(--text-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2px 8px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-
-    .last-version-notes {
-      font-size: 12.5px;
-      color: var(--text-secondary);
-      white-space: pre-line;
-      max-height: 150px;
-      overflow-y: auto;
-      margin-bottom: 12px;
-    }
-
-    .last-version-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #60a5fa;
-      text-decoration: none;
     }
 
     .stats-pill-wrap {
@@ -316,6 +235,8 @@
       opacity: 0;
       transform: translateY(10px) scale(0.98);
       transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
     }
 
     .stats-pill.visible {
@@ -519,6 +440,95 @@
       text-overflow: ellipsis;
     }
 
+    .versions-section {
+      margin-top: 44px;
+    }
+
+    .versions-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .versions-toggle:hover {
+      border-color: rgba(59, 130, 246, 0.35);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .versions-list {
+      display: none;
+      margin-top: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 12px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .versions-list.open {
+      display: flex;
+    }
+
+    .version-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      flex-wrap: wrap;
+    }
+
+    .version-row-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .version-row-tag {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .version-row-meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .version-row-dl {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      padding: 0 14px;
+      border-radius: 10px;
+      background: var(--accent-color);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .version-row-dl:hover {
+      background: var(--accent-hover);
+    }
+
     footer {
       text-align: center;
       margin-top: 56px;
@@ -558,19 +568,7 @@
         </a>
       </div>
 
-      <div id="versionMeta" class="version-meta">
-        <span id="versionMetaText">Android APK • Latest Release</span>
-        <button id="lastVersionBtn" type="button" class="last-version-btn">Last version</button>
-      </div>
-
-      <div id="lastVersionPanel" class="last-version-panel" aria-hidden="true">
-        <div class="last-version-header">
-          <span id="lastVersionTitle" class="last-version-title">Latest Release</span>
-          <button id="lastVersionClose" type="button" class="last-version-close">Close</button>
-        </div>
-        <div id="lastVersionNotes" class="last-version-notes">No release notes available.</div>
-        <a id="lastVersionLink" href="https://github.com/Hance-PDv/Nox_sound/releases/latest" target="_self" class="last-version-link">Open release page</a>
-      </div>
+      <div id="versionMeta" class="version-meta">Android APK • Latest Release</div>
 
       <div class="stats-pill-wrap">
         <div id="downloadsStatsPill" class="stats-pill" aria-live="polite">
@@ -590,7 +588,7 @@
           </div>
         </div>
 
-        <div id="starsStatsPill" class="stats-pill" aria-live="polite">
+        <a id="starsStatsPill" href="https://github.com/Hance-PDv/Nox_sound" target="_blank" rel="noopener noreferrer" class="stats-pill" aria-live="polite">
           <div class="stats-icon stars-icon" aria-hidden="true">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2l2.92 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.08-1.01L12 2z" />
@@ -602,7 +600,7 @@
               <span class="stats-label">Stars</span>
             </span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
 
@@ -686,6 +684,14 @@
       </div>
     </section>
 
+    <section class="versions-section">
+      <button id="latestVersionToggle" type="button" class="versions-toggle" aria-expanded="false" aria-controls="latestVersionList">
+        <span>Latest Version &amp; All Releases</span>
+        <span id="latestVersionChevron">+</span>
+      </button>
+      <div id="latestVersionList" class="versions-list"></div>
+    </section>
+
     <footer>
       &copy; 2026 Nox Sound by Hance PDv. All rights reserved.
     </footer>
@@ -695,19 +701,16 @@
     const fallbackReleasesPage = "https://github.com/Hance-PDv/Nox_sound/releases/latest";
     const downloadBtn = document.getElementById('downloadBtn');
     const downloadBtnVersion = document.getElementById('downloadBtnVersion');
-    const versionMetaText = document.getElementById('versionMetaText');
-    const lastVersionBtn = document.getElementById('lastVersionBtn');
-    const lastVersionPanel = document.getElementById('lastVersionPanel');
-    const lastVersionTitle = document.getElementById('lastVersionTitle');
-    const lastVersionNotes = document.getElementById('lastVersionNotes');
-    const lastVersionLink = document.getElementById('lastVersionLink');
-    const lastVersionClose = document.getElementById('lastVersionClose');
+    const versionMeta = document.getElementById('versionMeta');
     const downloadsStatsPill = document.getElementById('downloadsStatsPill');
     const totalDownloadsCountEl = document.getElementById('totalDownloadsCount');
     const starsStatsPill = document.getElementById('starsStatsPill');
     const repoStarsCountEl = document.getElementById('repoStarsCount');
     const screenshotsScroll = document.getElementById('screenshotsScroll');
-    const CACHE_KEY_STATE = 'nox_sound_release_state_v3';
+    const latestVersionToggle = document.getElementById('latestVersionToggle');
+    const latestVersionList = document.getElementById('latestVersionList');
+    const latestVersionChevron = document.getElementById('latestVersionChevron');
+    const CACHE_KEY_STATE = 'nox_sound_release_state_v4';
     const RELEASES_API_URL = 'https://api.github.com/repos/Hance-PDv/Nox_sound/releases?per_page=100';
     const REPO_API_URL = 'https://api.github.com/repos/Hance-PDv/Nox_sound';
     const LIVE_POLL_INTERVAL_MS = 90000;
@@ -717,17 +720,13 @@
     let isFetchingReleases = false;
     let hasRenderedInitial = false;
 
-    if (lastVersionBtn && lastVersionPanel) {
-      lastVersionBtn.addEventListener('click', () => {
-        const isOpen = lastVersionPanel.classList.toggle('open');
-        lastVersionPanel.setAttribute('aria-hidden', String(!isOpen));
-      });
-    }
-
-    if (lastVersionClose && lastVersionPanel) {
-      lastVersionClose.addEventListener('click', () => {
-        lastVersionPanel.classList.remove('open');
-        lastVersionPanel.setAttribute('aria-hidden', 'true');
+    if (latestVersionToggle && latestVersionList) {
+      latestVersionToggle.addEventListener('click', () => {
+        const isOpen = latestVersionList.classList.toggle('open');
+        latestVersionToggle.setAttribute('aria-expanded', String(isOpen));
+        if (latestVersionChevron) {
+          latestVersionChevron.textContent = isOpen ? '−' : '+';
+        }
       });
     }
 
@@ -888,6 +887,28 @@
       });
     }
 
+    function renderVersionsList(versions) {
+      if (!latestVersionList) return;
+      if (!Array.isArray(versions) || versions.length === 0) {
+        latestVersionList.innerHTML = '<div class="version-row-meta">No APK releases found.</div>';
+        return;
+      }
+
+      latestVersionList.innerHTML = versions.map((item, idx) => {
+        const label = idx === 0 ? `${item.version} • Latest` : item.version;
+        const metaParts = [item.sizeText, typeof item.downloads === 'number' ? `${item.downloads.toLocaleString('en-US')} downloads` : ''].filter(Boolean);
+        return `
+          <div class="version-row">
+            <div class="version-row-info">
+              <span class="version-row-tag">${label}</span>
+              <span class="version-row-meta">${metaParts.join(' • ') || 'Android APK'}</span>
+            </div>
+            <a href="${item.url}" target="_self" class="version-row-dl version-dl-btn">Download</a>
+          </div>
+        `;
+      }).join('');
+    }
+
     function calculateTotalDownloads(releases) {
       if (!Array.isArray(releases)) return 0;
       return releases.reduce((total, rel) => {
@@ -919,24 +940,15 @@
           downloadBtn.target = '_self';
           downloadBtn.removeAttribute('download');
         }
-        if (versionMetaText) {
-          versionMetaText.textContent = state.latest.sizeText
+        if (versionMeta) {
+          versionMeta.textContent = state.latest.sizeText
             ? `Android APK • ${state.latest.sizeText}`
             : "Android APK • Latest Release";
         }
-        if (lastVersionTitle) {
-          lastVersionTitle.textContent = state.latest.releaseName
-            ? `${state.latest.releaseName} (${state.latest.version})`
-            : `Latest Release ${state.latest.version || ''}`.trim();
-        }
-        if (lastVersionNotes) {
-          lastVersionNotes.textContent = state.latest.notes && state.latest.notes.trim()
-            ? state.latest.notes.trim()
-            : "No release notes available.";
-        }
-        if (lastVersionLink) {
-          lastVersionLink.href = state.latest.htmlUrl || fallbackReleasesPage;
-        }
+      }
+
+      if (Array.isArray(state.versions)) {
+        renderVersionsList(state.versions);
       }
     }
 
@@ -977,20 +989,23 @@
             .sort((a, b) => compareVersions(b.tag_name, a.tag_name));
 
           let latestState = null;
+          const versionsList = apkReleases.map(rel => {
+            const apkAsset = rel.assets.find(a => a && a.name && a.name.toLowerCase().endsWith('.apk'));
+            const ver = formatVersion(rel.tag_name);
+            const relDownloads = rel.assets.reduce((s, a) => s + (a && typeof a.download_count === 'number' ? a.download_count : 0), 0);
+            return {
+              version: ver,
+              url: apkAsset.browser_download_url || fallbackReleasesPage,
+              sizeText: formatSizeMb(apkAsset.size),
+              downloads: relDownloads
+            };
+          });
 
-          if (apkReleases.length > 0) {
-            const latestRel = apkReleases[0];
-            const latestApk = latestRel.assets.find(a => a && a.name && a.name.toLowerCase().endsWith('.apk'));
-            const latestVersion = formatVersion(latestRel.tag_name);
-
+          if (versionsList.length > 0) {
             latestState = {
-              version: latestVersion,
-              url: latestApk.browser_download_url || fallbackReleasesPage,
-              filename: latestApk.name || `nox_sound_${latestVersion}.apk`,
-              sizeText: formatSizeMb(latestApk.size),
-              releaseName: latestRel.name || '',
-              notes: latestRel.body || '',
-              htmlUrl: latestRel.html_url || fallbackReleasesPage
+              version: versionsList[0].version,
+              url: versionsList[0].url,
+              sizeText: versionsList[0].sizeText
             };
           }
 
@@ -1002,7 +1017,8 @@
           const newState = {
             totalDownloads,
             stars: typeof stars === 'number' ? stars : prevCached.stars,
-            latest: latestState
+            latest: latestState,
+            versions: versionsList
           };
 
           try {
