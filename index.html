@@ -459,7 +459,7 @@
       </p>
 
       <div class="hero-actions">
-        <a id="downloadBtn" href="https://github.com/Hance-PDv/Nox_sound/releases/latest" class="download-btn">
+        <a id="downloadBtn" href="https://github.com/Hance-PDv/Nox_sound/releases/latest" target="_self" class="download-btn">
           <span>Download</span>
           <span id="downloadBtnVersion" class="dl-version-pill"></span>
         </a>
@@ -764,9 +764,8 @@
         }
         if (downloadBtn && state.latest.url) {
           downloadBtn.href = state.latest.url;
-          if (state.latest.filename) {
-            downloadBtn.setAttribute('download', state.latest.filename);
-          }
+          downloadBtn.target = '_self';
+          downloadBtn.removeAttribute('download');
         }
         if (versionMeta) {
           versionMeta.textContent = state.latest.sizeText
