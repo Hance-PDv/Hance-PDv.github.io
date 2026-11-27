@@ -686,7 +686,7 @@
 
     <section class="versions-section">
       <button id="latestVersionToggle" type="button" class="versions-toggle" aria-expanded="false" aria-controls="latestVersionList">
-        <span>Latest Version &amp; All Releases</span>
+        <span>Previous Versions</span>
         <span id="latestVersionChevron">+</span>
       </button>
       <div id="latestVersionList" class="versions-list"></div>
@@ -710,7 +710,7 @@
     const latestVersionToggle = document.getElementById('latestVersionToggle');
     const latestVersionList = document.getElementById('latestVersionList');
     const latestVersionChevron = document.getElementById('latestVersionChevron');
-    const CACHE_KEY_STATE = 'nox_sound_release_state_v4';
+    const CACHE_KEY_STATE = 'nox_sound_release_state_v5';
     const RELEASES_API_URL = 'https://api.github.com/repos/Hance-PDv/Nox_sound/releases?per_page=100';
     const REPO_API_URL = 'https://api.github.com/repos/Hance-PDv/Nox_sound';
     const LIVE_POLL_INTERVAL_MS = 90000;
@@ -887,20 +887,19 @@
       });
     }
 
-    function renderVersionsList(versions) {
+    function renderVersionsList(previousVersions) {
       if (!latestVersionList) return;
-      if (!Array.isArray(versions) || versions.length === 0) {
-        latestVersionList.innerHTML = '<div class="version-row-meta">No APK releases found.</div>';
+      if (!Array.isArray(previousVersions) || previousVersions.length === 0) {
+        latestVersionList.innerHTML = '<div class="version-row-meta">No previous versions available.</div>';
         return;
       }
 
-      latestVersionList.innerHTML = versions.map((item, idx) => {
-        const label = idx === 0 ? `${item.version} • Latest` : item.version;
+      latestVersionList.innerHTML = previousVersions.map((item) => {
         const metaParts = [item.sizeText, typeof item.downloads === 'number' ? `${item.downloads.toLocaleString('en-US')} downloads` : ''].filter(Boolean);
         return `
           <div class="version-row">
             <div class="version-row-info">
-              <span class="version-row-tag">${label}</span>
+              <span class="version-row-tag">${item.version}</span>
               <span class="version-row-meta">${metaParts.join(' • ') || 'Android APK'}</span>
             </div>
             <a href="${item.url}" target="_self" class="version-row-dl version-dl-btn">Download</a>
@@ -947,8 +946,8 @@
         }
       }
 
-      if (Array.isArray(state.versions)) {
-        renderVersionsList(state.versions);
+      if (Array.isArray(state.previousVersions)) {
+        renderVersionsList(state.previousVersions);
       }
     }
 
@@ -989,7 +988,7 @@
             .sort((a, b) => compareVersions(b.tag_name, a.tag_name));
 
           let latestState = null;
-          const versionsList = apkReleases.map(rel => {
+          const allVersions = apkReleases.map(rel => {
             const apkAsset = rel.assets.find(a => a && a.name && a.name.toLowerCase().endsWith('.apk'));
             const ver = formatVersion(rel.tag_name);
             const relDownloads = rel.assets.reduce((s, a) => s + (a && typeof a.download_count === 'number' ? a.download_count : 0), 0);
@@ -1001,13 +1000,15 @@
             };
           });
 
-          if (versionsList.length > 0) {
+          if (allVersions.length > 0) {
             latestState = {
-              version: versionsList[0].version,
-              url: versionsList[0].url,
-              sizeText: versionsList[0].sizeText
+              version: allVersions[0].version,
+              url: allVersions[0].url,
+              sizeText: allVersions[0].sizeText
             };
           }
+
+          const previousVersions = allVersions.slice(1);
 
           const prevCached = (() => {
             try { return JSON.parse(localStorage.getItem(CACHE_KEY_STATE) || 'null') || {}; }
@@ -1018,7 +1019,7 @@
             totalDownloads,
             stars: typeof stars === 'number' ? stars : prevCached.stars,
             latest: latestState,
-            versions: versionsList
+            previousVersions
           };
 
           try {
