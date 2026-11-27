@@ -1,1098 +1,718 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nox Sound - Music Player for Android</title>
 
-    <title>Nox Sound - Music Player for Android</title>
+  <meta name="application-name" content="Nox Sound" />
+  <meta name="apple-mobile-web-app-title" content="Nox Sound" />
+  <meta name="author" content="Hance PDv" />
+  <meta name="description" content="Download Nox Sound for Android. Stream trending music online, save tracks for offline playback, view real-time synced lyrics, and enjoy a clean dark interface." />
+  <meta name="keywords" content="Nox Sound, Nox Sound APK, Android Music Player, Offline Music App, Hance PDv" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#090b10" />
 
-    <meta name="application-name" content="Nox Sound">
-    <meta name="apple-mobile-web-app-title" content="Nox Sound">
-    <meta name="author" content="Hance PDv">
-    <meta name="description" content="Download Nox Sound for Android. Stream trending music online, save tracks for offline playback, view real-time synced lyrics, and enjoy a clean dark interface.">
-    <meta name="keywords" content="Nox Sound, Nox Sound APK, Android Music Player, Offline Music App, Hance PDv">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#090b10">
+  <link rel="canonical" href="https://hance-pdv.github.io/" />
+  <link rel="icon" type="image/png" sizes="512x512" href="https://hance-pdv.github.io/favicon.png" />
+  <link rel="shortcut icon" href="https://hance-pdv.github.io/favicon.png" />
+  <link rel="apple-touch-icon" href="https://hance-pdv.github.io/favicon.png" />
+  <link rel="image_src" href="https://hance-pdv.github.io/favicon.png" />
 
-    <link rel="canonical" href="https://hance-pdv.github.io/">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Nox Sound" />
+  <meta property="og:title" content="Nox Sound - Music Player for Android" />
+  <meta property="og:description" content="Stream music online, download for offline listening, and enjoy real-time synced lyrics on Android." />
+  <meta property="og:url" content="https://hance-pdv.github.io/" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/app_icon.png" />
+  <meta property="og:image:alt" content="Nox Sound App Icon" />
 
-    <!-- Google Favicon -->
-    <link rel="icon" type="image/png" sizes="512x512" href="https://hance-pdv.github.io/favicon.png">
-    <link rel="shortcut icon" href="https://hance-pdv.github.io/favicon.png">
-    <link rel="apple-touch-icon" href="https://hance-pdv.github.io/favicon.png">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Nox Sound - Music Player for Android" />
+  <meta name="twitter:description" content="Stream music online, download for offline listening, and enjoy real-time synced lyrics on Android." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/app_icon.png" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Nox Sound">
-    <meta property="og:title" content="Nox Sound - Music Player for Android">
-    <meta property="og:description" content="Stream music online, download for offline listening, and enjoy real-time synced lyrics on Android.">
-    <meta property="og:url" content="https://hance-pdv.github.io/">
-    <meta property="og:image" content="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/app_icon.png">
-    <meta property="og:image:alt" content="Nox Sound App Icon">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://hance-pdv.github.io/#website",
+        "name": "Nox Sound",
+        "alternateName": "Nox Sound - Music Player",
+        "url": "https://hance-pdv.github.io/",
+        "dateModified": "2026-11-27",
+        "publisher": { "@id": "https://hance-pdv.github.io/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://hance-pdv.github.io/#organization",
+        "name": "Nox Sound",
+        "url": "https://hance-pdv.github.io/",
+        "logo": { "@type": "ImageObject", "url": "https://hance-pdv.github.io/favicon.png" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://hance-pdv.github.io/#app",
+        "name": "Nox Sound",
+        "operatingSystem": "Android",
+        "applicationCategory": "MultimediaApplication",
+        "dateModified": "2026-11-27",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Hance PDv" },
+        "image": "https://hance-pdv.github.io/favicon.png",
+        "url": "https://hance-pdv.github.io/"
+      }
+    ]
+  }
+  </script>
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Nox Sound - Music Player for Android">
-    <meta name="twitter:description" content="Stream music online, download for offline listening, and enjoy real-time synced lyrics on Android.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/app_icon.png">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://hance-pdv.github.io/#website",
-          "name": "Nox Sound",
-          "alternateName": "Nox Sound - Music Player",
-          "url": "https://hance-pdv.github.io/",
-          "publisher": {
-            "@id": "https://hance-pdv.github.io/#organization"
-          }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://hance-pdv.github.io/#organization",
-          "name": "Nox Sound",
-          "url": "https://hance-pdv.github.io/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://hance-pdv.github.io/favicon.png"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "@id": "https://hance-pdv.github.io/#app",
-          "name": "Nox Sound",
-          "operatingSystem": "Android",
-          "applicationCategory": "MultimediaApplication",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Hance PDv"
-          },
-          "image": "https://hance-pdv.github.io/favicon.png",
-          "url": "https://hance-pdv.github.io/"
-        }
-      ]
+  <style>
+    :root {
+      --bg-color: #090b10;
+      --text-primary: #ffffff;
+      --text-secondary: #94a3b8;
+      --accent-color: #3b82f6;
+      --accent-hover: #2563eb;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --border-color: rgba(255, 255, 255, 0.08);
     }
-    </script>
 
-    <style>
-        :root {
-            --bg-color: #090b10;
-            --text-primary: #ffffff;
-            --text-secondary: #94a3b8;
-            --accent-color: #3b82f6;
-            --accent-hover: #2563eb;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --border-color: rgba(255, 255, 255, 0.08);
-        }
+    * { box-sizing: border-box; }
 
-        * {
-            box-sizing: border-box;
-        }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 48px 16px;
+    }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 48px 16px;
-        }
+    .container { max-width: 840px; margin: 0 auto; }
+    .text-center { text-align: center; }
 
-        .container {
-            max-width: 840px;
-            margin: 0 auto;
-        }
+    .app-icon {
+      width: 112px;
+      height: 112px;
+      border-radius: 26px;
+      margin-bottom: 14px;
+      object-fit: contain;
+    }
 
-        .text-center {
-            text-align: center;
-        }
+    h1 {
+      font-size: 40px;
+      font-weight: 800;
+      margin: 4px 0 12px 0;
+      letter-spacing: -0.5px;
+    }
 
-        .app-icon {
-            width: 112px;
-            height: 112px;
-            border-radius: 26px;
-            margin-bottom: 14px;
-            object-fit: contain;
-        }
+    .description {
+      color: var(--text-secondary);
+      font-size: 15px;
+      max-width: 560px;
+      margin: 0 auto 26px auto;
+      line-height: 1.7;
+    }
 
-        h1 {
-            font-size: 40px;
-            font-weight: 800;
-            margin: 4px 0 12px 0;
-            letter-spacing: -0.5px;
-        }
+    .description-tagline {
+      display: inline-block;
+      margin-top: 2px;
+      color: var(--text-primary);
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
 
-        .description {
-            color: var(--text-secondary);
-            font-size: 15px;
-            max-width: 560px;
-            margin: 0 auto 26px auto;
-            line-height: 1.7;
-        }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-        .description-tagline {
-            display: inline-block;
-            margin-top: 2px;
-            color: var(--text-primary);
-            font-weight: 600;
-            letter-spacing: 0.2px;
-        }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 52px;
+      background: var(--accent-color);
+      color: #ffffff;
+      padding: 0 26px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 24px rgba(59, 130, 246, 0.34);
+    }
 
-        .hero-actions {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+    .download-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(59, 130, 246, 0.46);
+    }
 
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            height: 52px;
-            background: var(--accent-color);
-            color: #ffffff;
-            padding: 0 26px;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 15px;
-            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 6px 24px rgba(59, 130, 246, 0.34);
-        }
+    .dl-version-pill {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      line-height: 1.3;
+      letter-spacing: 0.2px;
+    }
 
-        .download-btn:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(59, 130, 246, 0.46);
-        }
+    .dl-version-pill:empty { display: none; }
 
-        .dl-version-pill {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 999px;
-            line-height: 1.3;
-            letter-spacing: 0.2px;
-        }
+    .store-badge-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      border-radius: 14px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
 
-        .dl-version-pill:empty {
-            display: none;
-        }
+    .store-badge-link:hover { transform: translateY(-2px); opacity: 0.92; }
+    .store-badge-link img { height: 52px; width: auto; display: block; }
+    .version-meta { margin-top: 10px; font-size: 12px; color: var(--text-secondary); }
+    .stats-pill-wrap { margin-top: 14px; display: flex; justify-content: center; }
 
-        .store-badge-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            height: 52px;
-            border-radius: 14px;
-            transition: transform 0.2s, opacity 0.2s;
-        }
+    .stats-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 9px 18px;
+      border-radius: 14px;
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+      transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .store-badge-link:hover {
-            transform: translateY(-2px);
-            opacity: 0.92;
-        }
+    .stats-pill.visible { opacity: 1; transform: translateY(0) scale(1); }
 
-        .store-badge-link img {
-            height: 52px;
-            width: auto;
-            display: block;
-        }
+    .stats-pill.pulse {
+      border-color: rgba(59, 130, 246, 0.55);
+      background: rgba(59, 130, 246, 0.08);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.22);
+    }
 
-        .version-meta {
-            margin-top: 10px;
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
+    .stats-pill:hover {
+      border-color: rgba(59, 130, 246, 0.35);
+      background: rgba(255, 255, 255, 0.045);
+    }
 
-        .stats-pill-wrap {
-            margin-top: 14px;
-            display: flex;
-            justify-content: center;
-        }
+    .stats-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.28);
+      color: #60a5fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-        .stats-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 11px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 9px 18px;
-            border-radius: 14px;
-            opacity: 0;
-            transform: translateY(10px) scale(0.98);
-            transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-        }
+    .stats-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 1px;
+    }
 
-        .stats-pill.visible {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
+    .stats-value {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.3px;
+      line-height: 1.15;
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
 
-        .stats-pill.pulse {
-            border-color: rgba(59, 130, 246, 0.55);
-            background: rgba(59, 130, 246, 0.08);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.22);
-        }
+    .stats-pill.pulse .stats-value { color: #60a5fa; }
+    .stats-label-row { display: inline-flex; align-items: center; gap: 6px; }
+    .stats-label { font-size: 11.5px; color: var(--text-secondary); line-height: 1.2; }
 
-        .stats-pill:hover {
-            border-color: rgba(59, 130, 246, 0.35);
-            background: rgba(255, 255, 255, 0.045);
-        }
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #22c55e;
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+      animation: livePulse 2.2s infinite;
+    }
 
-        .stats-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 9px;
-            background: rgba(59, 130, 246, 0.14);
-            border: 1px solid rgba(59, 130, 246, 0.28);
-            color: #60a5fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
+    @keyframes livePulse {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65); }
+      70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
 
-        .stats-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-            gap: 1px;
-        }
+    hr { border: 0; height: 1px; background: var(--border-color); margin: 44px 0; }
+    h2 { font-size: 24px; font-weight: 700; margin-bottom: 20px; }
 
-        .stats-value {
-            font-size: 17px;
-            font-weight: 800;
-            color: var(--text-primary);
-            font-variant-numeric: tabular-nums;
-            letter-spacing: -0.3px;
-            line-height: 1.15;
-            transition: transform 0.25s ease, color 0.25s ease;
-        }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
 
-        .stats-pill.pulse .stats-value {
-            color: #60a5fa;
-        }
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
 
-        .stats-label-row {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
+    .feature-card strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
 
-        .stats-label {
-            font-size: 11.5px;
-            color: var(--text-secondary);
-            line-height: 1.2;
-        }
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 13px;
+      margin: 0;
+      line-height: 1.6;
+    }
 
-        .live-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #22c55e;
-            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
-            animation: livePulse 2.2s infinite;
-        }
+    .screenshots-scroll {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 4px 2px 14px 2px;
+      margin-top: 12px;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+      cursor: grab;
+      user-select: none;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.16) rgba(255, 255, 255, 0.03);
+    }
 
-        @keyframes livePulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65);
-            }
-            70% {
-                box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-            }
-        }
+    .screenshots-scroll.is-dragging { cursor: grabbing; }
+    .screenshots-scroll::-webkit-scrollbar { height: 6px; }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background: var(--border-color);
-            margin: 44px 0;
-        }
+    .screenshots-scroll::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 999px;
+    }
 
-        h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
+    .screenshots-scroll::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+    }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 16px;
-        }
+    .screenshots-scroll::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.5); }
+    .screenshot-item { flex: 0 0 210px; text-align: center; }
 
-        .feature-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-        }
+    .screenshot-item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      display: block;
+      -webkit-user-drag: none;
+      pointer-events: none;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
 
-        .feature-card strong {
-            display: block;
-            font-size: 15px;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
+    .screenshot-item:hover img {
+      transform: translateY(-3px);
+      border-color: rgba(59, 130, 246, 0.35);
+    }
 
-        .feature-card p {
-            color: var(--text-secondary);
-            font-size: 13px;
-            margin: 0;
-            line-height: 1.6;
-        }
+    .screenshot-item b {
+      display: block;
+      margin-top: 10px;
+      font-size: 13.5px;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-        .screenshots-scroll {
-            display: flex;
-            gap: 16px;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 4px 2px 14px 2px;
-            margin-top: 12px;
-            -webkit-overflow-scrolling: touch;
-            overscroll-behavior-x: contain;
-            cursor: grab;
-            user-select: none;
-            scrollbar-width: thin;
-            scrollbar-color: rgba(255, 255, 255, 0.16) rgba(255, 255, 255, 0.03);
-        }
+    footer {
+      text-align: center;
+      margin-top: 56px;
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
 
-        .screenshots-scroll.is-dragging {
-            cursor: grabbing;
-        }
-
-        .screenshots-scroll::-webkit-scrollbar {
-            height: 6px;
-        }
-
-        .screenshots-scroll::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 999px;
-        }
-
-        .screenshots-scroll::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.16);
-            border-radius: 999px;
-        }
-
-        .screenshots-scroll::-webkit-scrollbar-thumb:hover {
-            background: rgba(59, 130, 246, 0.5);
-        }
-
-        .screenshot-item {
-            flex: 0 0 210px;
-            text-align: center;
-        }
-
-        .screenshot-item img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-            display: block;
-            -webkit-user-drag: none;
-            pointer-events: none;
-            transition: transform 0.25s ease, border-color 0.25s ease;
-        }
-
-        .screenshot-item:hover img {
-            transform: translateY(-3px);
-            border-color: rgba(59, 130, 246, 0.35);
-        }
-
-        .screenshot-item b {
-            display: block;
-            margin-top: 10px;
-            font-size: 13.5px;
-            color: var(--text-primary);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 56px;
-            color: var(--text-secondary);
-            font-size: 13px;
-        }
-
-        @media (max-width: 640px) {
-            h1 {
-                font-size: 32px;
-            }
-
-            .screenshot-item {
-                flex: 0 0 175px;
-            }
-        }
-    </style>
+    @media (max-width: 640px) {
+      h1 { font-size: 32px; }
+      .screenshot-item { flex: 0 0 175px; }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <div class="text-center">
+      <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/app_icon.png" width="112" alt="Nox Sound Icon" class="app-icon" />
+      <h1>Nox Sound</h1>
+      <p class="description">
+        Music, crafted for a better listening experience.<br />
+        <span class="description-tagline">Listen. Discover. Enjoy.</span>
+      </p>
 
-    <div class="container">
-        <div class="text-center">
+      <div class="hero-actions">
+        <a id="downloadBtn" href="https://github.com/Hance-PDv/Nox_sound/releases/latest" class="download-btn">
+          <span>Download</span>
+          <span id="downloadBtnVersion" class="dl-version-pill"></span>
+        </a>
+        <a href="https://rookieenough.github.io/Orion-Data/app/?id=nox-sound" class="store-badge-link">
+          <img src="https://raw.githubusercontent.com/RookieEnough/Orion-Store/refs/heads/main/assets/orion-badge.png" alt="Get it on Orion Store" height="52" />
+        </a>
+      </div>
 
-            <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/app_icon.png"
-                 width="112"
-                 alt="Nox Sound Icon"
-                 class="app-icon" />
+      <div id="versionMeta" class="version-meta">Android APK • Latest Release</div>
 
-            <h1>Nox Sound</h1>
-
-            <p class="description">
-                Music, crafted for a better listening experience.<br>
-                <span class="description-tagline">Listen. Discover. Enjoy.</span>
-            </p>
-
-            <div class="hero-actions">
-
-                <a id="downloadBtn"
-                   href="https://github.com/Hance-PDv/Nox_sound/releases/latest"
-                   class="download-btn">
-
-                    <span>Download</span>
-                    <span id="downloadBtnVersion" class="dl-version-pill"></span>
-
-                </a>
-
-                <a href="https://rookieenough.github.io/Orion-Data/app/?id=nox-sound"
-                   class="store-badge-link">
-
-                    <img src="https://raw.githubusercontent.com/RookieEnough/Orion-Store/refs/heads/main/assets/orion-badge.png"
-                         alt="Get it on Orion Store"
-                         height="52" />
-
-                </a>
-
-            </div>
-
-            <div id="versionMeta" class="version-meta">
-                Android APK • Latest Release
-            </div>
-
-            <div class="stats-pill-wrap">
-
-                <div id="downloadsStatsPill" class="stats-pill" aria-live="polite">
-
-                    <div class="stats-icon" aria-hidden="true">
-
-                        <svg width="16" height="16" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor"
-                             stroke-width="2.3" stroke-linecap="round"
-                             stroke-linejoin="round">
-
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
-
-                        </svg>
-
-                    </div>
-
-                    <div class="stats-text">
-
-                        <span id="totalDownloadsCount" class="stats-value">0</span>
-
-                        <span class="stats-label-row">
-                            <span class="live-dot" aria-hidden="true"></span>
-                            <span class="stats-label">Downloads</span>
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+      <div class="stats-pill-wrap">
+        <div id="downloadsStatsPill" class="stats-pill" aria-live="polite">
+          <div class="stats-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          </div>
+          <div class="stats-text">
+            <span id="totalDownloadsCount" class="stats-value">0</span>
+            <span class="stats-label-row">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span class="stats-label">Downloads</span>
+            </span>
+          </div>
         </div>
-
-        <hr />
-
-        <section>
-
-            <h2>Features</h2>
-
-            <div class="features-grid">
-
-                <div class="feature-card">
-                    <strong>Online Streaming & Discovery</strong>
-                    <p>Explore trending tracks and stream music smoothly online with smart search, live suggestions, and quick switching between streamed audio and offline files.</p>
-                </div>
-
-                <div class="feature-card">
-                    <strong>Data-Smart Offline Downloads & Cache Reuse</strong>
-                    <p>Save tracks for offline listening while reusing already-streamed audio and cached artwork to avoid duplicate downloads, paired with a dedicated Download Manager and stream cache controls.</p>
-                </div>
-
-                <div class="feature-card">
-                    <strong>Instant Offline Playback</strong>
-                    <p>Play saved offline tracks immediately with zero extra data usage, even after clearing streaming cache, with multi-select batch deletion and safe back-button handling.</p>
-                </div>
-
-                <div class="feature-card">
-                    <strong>Background Playback & Queue Control</strong>
-                    <p>Keep audio running reliably in the background while using other apps, with responsive playback controls, quick track skipping, and flexible queue management for uninterrupted listening.</p>
-                </div>
-
-                <div class="feature-card">
-                    <strong>Real-Time Synced Lyrics</strong>
-                    <p>Follow every song line by line with time-synchronized lyrics that track your playback position automatically and scroll smoothly as the music plays.</p>
-                </div>
-
-                <div class="feature-card">
-                    <strong>Smart Sleep Timer</strong>
-                    <p>Set a custom countdown timer before sleep or focus sessions so playback stops cleanly on schedule without draining battery overnight.</p>
-                </div>
-
-                <div class="feature-card">
-                    <strong>Favorites & Custom Playlists</strong>
-                    <p>Save tracks you love with a single tap and build custom playlists tailored to different moods, sessions, or artists with easy organization.</p>
-                </div>
-
-                <div class="feature-card">
-                    <strong>Redesigned Dark Interface</strong>
-                    <p>Experience a refreshed color palette and updated layouts across Home, Discovery, Search, and Settings for clearer hierarchy, frosted glass accents, and smoother everyday navigation.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <hr />
-
-        <section>
-
-            <h2>Screenshots</h2>
-
-            <div id="screenshotsScroll" class="screenshots-scroll">
-
-                <div class="screenshot-item">
-                    <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/1NoxSound.png" alt="Home" draggable="false" />
-                    <b>Home</b>
-                </div>
-
-                <div class="screenshot-item">
-                    <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/2NoxSound.png" alt="Discovery" draggable="false" />
-                    <b>Discovery</b>
-                </div>
-
-                <div class="screenshot-item">
-                    <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/3NoxSound.png" alt="Search" draggable="false" />
-                    <b>Search</b>
-                </div>
-
-                <div class="screenshot-item">
-                    <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/4NoxSound.png" alt="Player" draggable="false" />
-                    <b>Player</b>
-                </div>
-
-                <div class="screenshot-item">
-                    <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/5NoxSound.png" alt="Lyrics" draggable="false" />
-                    <b>Lyrics</b>
-                </div>
-
-                <div class="screenshot-item">
-                    <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/6NoxSound.png" alt="Library" draggable="false" />
-                    <b>Library</b>
-                </div>
-
-                <div class="screenshot-item">
-                    <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/7NoxSound.png" alt="Download Manager" draggable="false" />
-                    <b>Download Manager</b>
-                </div>
-
-                <div class="screenshot-item">
-                    <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/8NoxSound.png" alt="Setting" draggable="false" />
-                    <b>Setting</b>
-                </div>
-
-            </div>
-
-        </section>
-
-        <footer>
-            &copy; 2026 Nox Sound by Hance PDv. All rights reserved.
-        </footer>
-
+      </div>
     </div>
 
-    <script>
+    <hr />
 
-        const fallbackReleasesPage = "https://github.com/Hance-PDv/Nox_sound/releases/latest";
+    <section>
+      <h2>Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <strong>Online Streaming &amp; Discovery</strong>
+          <p>Explore trending tracks and stream music smoothly online with smart search, live suggestions, and quick switching between streamed audio and offline files.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Data-Smart Offline Downloads &amp; Cache Reuse</strong>
+          <p>Save tracks for offline listening while reusing already-streamed audio and cached artwork to avoid duplicate downloads, paired with a dedicated Download Manager and stream cache controls.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Instant Offline Playback</strong>
+          <p>Play saved offline tracks immediately with zero extra data usage, even after clearing streaming cache, with multi-select batch deletion and safe back-button handling.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Background Playback &amp; Queue Control</strong>
+          <p>Keep audio running reliably in the background while using other apps, with responsive playback controls, quick track skipping, and flexible queue management for uninterrupted listening.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Real-Time Synced Lyrics</strong>
+          <p>Follow every song line by line with time-synchronized lyrics that track your playback position automatically and scroll smoothly as the music plays.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Smart Sleep Timer</strong>
+          <p>Set a custom countdown timer before sleep or focus sessions so playback stops cleanly on schedule without draining battery overnight.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Favorites &amp; Custom Playlists</strong>
+          <p>Save tracks you love with a single tap and build custom playlists tailored to different moods, sessions, or artists with easy organization.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Redesigned Dark Interface</strong>
+          <p>Experience a refreshed color palette and updated layouts across Home, Discovery, Search, and Settings for clearer hierarchy, frosted glass accents, and smoother everyday navigation.</p>
+        </div>
+      </div>
+    </section>
 
-        const downloadBtn = document.getElementById('downloadBtn');
-        const downloadBtnVersion = document.getElementById('downloadBtnVersion');
-        const versionMeta = document.getElementById('versionMeta');
-        const downloadsStatsPill = document.getElementById('downloadsStatsPill');
-        const totalDownloadsCountEl = document.getElementById('totalDownloadsCount');
-        const screenshotsScroll = document.getElementById('screenshotsScroll');
+    <hr />
 
-        const CACHE_KEY_STATE = 'nox_sound_release_state_v2';
-        const RELEASES_API_URL = 'https://api.github.com/repos/Hance-PDv/Nox_sound/releases?per_page=100';
-        const LIVE_POLL_INTERVAL_MS = 90000;
+    <section>
+      <h2>Screenshots</h2>
+      <div id="screenshotsScroll" class="screenshots-scroll">
+        <div class="screenshot-item">
+          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/1NoxSound.png" alt="Home" loading="lazy" draggable="false" />
+          <b>Home</b>
+        </div>
+        <div class="screenshot-item">
+          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/2NoxSound.png" alt="Discovery" loading="lazy" draggable="false" />
+          <b>Discovery</b>
+        </div>
+        <div class="screenshot-item">
+          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/3NoxSound.png" alt="Search" loading="lazy" draggable="false" />
+          <b>Search</b>
+        </div>
+        <div class="screenshot-item">
+          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/4NoxSound.png" alt="Player" loading="lazy" draggable="false" />
+          <b>Player</b>
+        </div>
+        <div class="screenshot-item">
+          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/5NoxSound.png" alt="Lyrics" loading="lazy" draggable="false" />
+          <b>Lyrics</b>
+        </div>
+        <div class="screenshot-item">
+          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/6NoxSound.png" alt="Library" loading="lazy" draggable="false" />
+          <b>Library</b>
+        </div>
+        <div class="screenshot-item">
+          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/7NoxSound.png" alt="Download Manager" loading="lazy" draggable="false" />
+          <b>Download Manager</b>
+        </div>
+        <div class="screenshot-item">
+          <img src="https://raw.githubusercontent.com/Hance-PDv/Nox_sound/refs/heads/main/Screenshot/8NoxSound.png" alt="Setting" loading="lazy" draggable="false" />
+          <b>Setting</b>
+        </div>
+      </div>
+    </section>
 
-        let displayedDownloads = 0;
-        let counterAnimFrame = null;
-        let isFetchingReleases = false;
-        let hasRenderedInitial = false;
+    <footer>&copy; 2026 Nox Sound by Hance PDv. All rights reserved.</footer>
+  </div>
 
-        if (screenshotsScroll) {
+  <script>
+    const fallbackReleasesPage = "https://github.com/Hance-PDv/Nox_sound/releases/latest";
+    const downloadBtn = document.getElementById("downloadBtn");
+    const downloadBtnVersion = document.getElementById("downloadBtnVersion");
+    const versionMeta = document.getElementById("versionMeta");
+    const downloadsStatsPill = document.getElementById("downloadsStatsPill");
+    const totalDownloadsCountEl = document.getElementById("totalDownloadsCount");
+    const screenshotsScroll = document.getElementById("screenshotsScroll");
 
-            let isDown = false;
-            let startX = 0;
-            let scrollStart = 0;
-            let velocity = 0;
-            let lastX = 0;
-            let lastTime = 0;
-            let momentumId = null;
+    const CACHE_KEY_STATE = "nox_sound_release_state_v2";
+    const RELEASES_API_URL = "https://api.github.com/repos/Hance-PDv/Nox_sound/releases?per_page=100";
+    const LIVE_POLL_INTERVAL_MS = 90000;
 
-            function stopMomentum() {
-                if (momentumId) {
-                    cancelAnimationFrame(momentumId);
-                    momentumId = null;
-                }
-            }
+    let displayedDownloads = 0;
+    let counterAnimFrame = null;
+    let isFetchingReleases = false;
+    let hasRenderedInitial = false;
 
-            function startMomentum() {
-                stopMomentum();
+    if (screenshotsScroll) {
+      let isDown = false, startX = 0, scrollStart = 0, velocity = 0, lastX = 0, lastTime = 0, momentumId = null;
 
-                function step() {
-                    if (Math.abs(velocity) < 0.3) return;
+      function stopMomentum() {
+        if (momentumId) { cancelAnimationFrame(momentumId); momentumId = null; }
+      }
 
-                    screenshotsScroll.scrollLeft -= velocity;
-                    velocity *= 0.94;
-
-                    momentumId = requestAnimationFrame(step);
-                }
-
-                momentumId = requestAnimationFrame(step);
-            }
-
-            screenshotsScroll.addEventListener('mousedown', (e) => {
-
-                if (e.button !== 0) return;
-
-                stopMomentum();
-
-                isDown = true;
-                screenshotsScroll.classList.add('is-dragging');
-
-                startX = e.pageX;
-                lastX = e.pageX;
-                lastTime = performance.now();
-
-                scrollStart = screenshotsScroll.scrollLeft;
-                velocity = 0;
-
-            });
-
-            window.addEventListener('mousemove', (e) => {
-
-                if (!isDown) return;
-
-                e.preventDefault();
-
-                const now = performance.now();
-                const dt = Math.max(now - lastTime, 1);
-                const dx = e.pageX - lastX;
-
-                velocity = (dx / dt) * 16;
-
-                lastX = e.pageX;
-                lastTime = now;
-
-                screenshotsScroll.scrollLeft = scrollStart - (e.pageX - startX);
-
-            });
-
-            window.addEventListener('mouseup', () => {
-
-                if (!isDown) return;
-
-                isDown = false;
-
-                screenshotsScroll.classList.remove('is-dragging');
-
-                startMomentum();
-
-            });
-
-            screenshotsScroll.addEventListener('wheel', (e) => {
-
-                if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-
-                    e.preventDefault();
-
-                    stopMomentum();
-
-                    screenshotsScroll.scrollLeft += e.deltaY * 1.4;
-
-                }
-
-            }, { passive: false });
-
+      function startMomentum() {
+        stopMomentum();
+        function step() {
+          if (Math.abs(velocity) < 0.3) return;
+          screenshotsScroll.scrollLeft -= velocity;
+          velocity *= 0.94;
+          momentumId = requestAnimationFrame(step);
         }
+        momentumId = requestAnimationFrame(step);
+      }
 
-        function formatVersion(tag) {
-            if (!tag) return "";
-            return `v${String(tag).replace(/^v/i, '')}`;
+      screenshotsScroll.addEventListener("mousedown", (e) => {
+        if (e.button !== 0) return;
+        stopMomentum();
+        isDown = true;
+        screenshotsScroll.classList.add("is-dragging");
+        startX = lastX = e.pageX;
+        lastTime = performance.now();
+        scrollStart = screenshotsScroll.scrollLeft;
+        velocity = 0;
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const now = performance.now();
+        const dt = Math.max(now - lastTime, 1);
+        velocity = ((e.pageX - lastX) / dt) * 16;
+        lastX = e.pageX;
+        lastTime = now;
+        screenshotsScroll.scrollLeft = scrollStart - (e.pageX - startX);
+      });
+
+      window.addEventListener("mouseup", () => {
+        if (!isDown) return;
+        isDown = false;
+        screenshotsScroll.classList.remove("is-dragging");
+        startMomentum();
+      });
+
+      screenshotsScroll.addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          stopMomentum();
+          screenshotsScroll.scrollLeft += e.deltaY * 1.4;
         }
+      }, { passive: false });
+    }
 
-        function parseVersionParts(tag) {
+    function formatVersion(tag) {
+      return tag ? `v${String(tag).replace(/^v/i, "")}` : "";
+    }
 
-            const cleaned = String(tag || '').trim().replace(/^v/i, '').split('-')[0];
+    function parseVersionParts(tag) {
+      return String(tag || "").trim().replace(/^v/i, "").split("-")[0].split(".").map((part) => {
+        const num = parseInt(part.replace(/\D/g, ""), 10);
+        return isNaN(num) ? 0 : num;
+      });
+    }
 
-            return cleaned.split('.').map(part => {
+    function compareVersions(tagA, tagB) {
+      const a = parseVersionParts(tagA);
+      const b = parseVersionParts(tagB);
+      const maxLen = Math.max(a.length, b.length);
+      for (let i = 0; i < maxLen; i++) {
+        const diff = (a[i] || 0) - (b[i] || 0);
+        if (diff !== 0) return diff;
+      }
+      return 0;
+    }
 
-                const num = parseInt(part.replace(/\D/g, ''), 10);
+    function formatSizeMb(bytes) {
+      return bytes && bytes > 0 ? `${(bytes / (1024 * 1024)).toFixed(1)} MB` : "";
+    }
 
-                return isNaN(num) ? 0 : num;
+    function animateDownloadCounter(targetTotal, isLiveUpdate = false) {
+      if (!downloadsStatsPill || !totalDownloadsCountEl) return;
+      const finalValue = Math.max(0, Math.floor(Number(targetTotal) || 0));
+      downloadsStatsPill.style.display = "inline-flex";
+      requestAnimationFrame(() => downloadsStatsPill.classList.add("visible"));
 
-            });
+      if (isLiveUpdate && finalValue === displayedDownloads) return;
+      if (isLiveUpdate && finalValue > displayedDownloads) {
+        downloadsStatsPill.classList.add("pulse");
+        setTimeout(() => downloadsStatsPill.classList.remove("pulse"), 900);
+      }
 
+      if (counterAnimFrame) { cancelAnimationFrame(counterAnimFrame); counterAnimFrame = null; }
+
+      const startValue = displayedDownloads;
+      const diff = finalValue - startValue;
+      const duration = isLiveUpdate ? 750 : 1400;
+      const startTime = performance.now();
+
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 4);
+        const current = Math.round(startValue + diff * eased);
+        displayedDownloads = current;
+        totalDownloadsCountEl.textContent = current.toLocaleString("en-US");
+        if (progress < 1) {
+          counterAnimFrame = requestAnimationFrame(step);
+        } else {
+          displayedDownloads = finalValue;
+          totalDownloadsCountEl.textContent = finalValue.toLocaleString("en-US");
+          counterAnimFrame = null;
         }
+      }
 
-        function compareVersions(tagA, tagB) {
+      counterAnimFrame = requestAnimationFrame(step);
+    }
 
-            const a = parseVersionParts(tagA);
-            const b = parseVersionParts(tagB);
+    function calculateTotalDownloads(releases) {
+      if (!Array.isArray(releases)) return 0;
+      return releases.reduce((total, rel) => {
+        if (!rel || !Array.isArray(rel.assets)) return total;
+        return total + rel.assets.reduce((sum, asset) => sum + (asset && typeof asset.download_count === "number" ? asset.download_count : 0), 0);
+      }, 0);
+    }
 
-            const maxLen = Math.max(a.length, b.length);
-
-            for (let i = 0; i < maxLen; i++) {
-
-                const numA = a[i] || 0;
-                const numB = b[i] || 0;
-
-                if (numA !== numB) return numA - numB;
-
-            }
-
-            return 0;
+    function applyReleaseState(state, isLiveUpdate = false) {
+      if (!state) return;
+      if (typeof state.totalDownloads === "number") animateDownloadCounter(state.totalDownloads, isLiveUpdate);
+      if (state.latest) {
+        if (downloadBtnVersion && state.latest.version) downloadBtnVersion.textContent = state.latest.version;
+        if (downloadBtn && state.latest.url) {
+          downloadBtn.href = state.latest.url;
+          if (state.latest.filename) downloadBtn.setAttribute("download", state.latest.filename);
         }
-
-        function formatSizeMb(bytes) {
-
-            if (!bytes || bytes <= 0) return "";
-
-            return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-
+        if (versionMeta) {
+          versionMeta.textContent = state.latest.sizeText ? `Android APK • ${state.latest.sizeText}` : "Android APK • Latest Release";
         }
+      }
+    }
 
-        function animateDownloadCounter(targetTotal, isLiveUpdate = false) {
-
-            if (!downloadsStatsPill || !totalDownloadsCountEl) return;
-
-            const finalValue = Math.max(0, Math.floor(Number(targetTotal) || 0));
-
-            downloadsStatsPill.style.display = 'inline-flex';
-
-            requestAnimationFrame(() => {
-                downloadsStatsPill.classList.add('visible');
-            });
-
-            if (isLiveUpdate && finalValue === displayedDownloads) {
-                return;
-            }
-
-            if (isLiveUpdate && finalValue > displayedDownloads) {
-
-                downloadsStatsPill.classList.add('pulse');
-
-                setTimeout(() => {
-                    downloadsStatsPill.classList.remove('pulse');
-                }, 900);
-
-            }
-
-            if (counterAnimFrame) {
-
-                cancelAnimationFrame(counterAnimFrame);
-                counterAnimFrame = null;
-
-            }
-
-            const startValue = displayedDownloads;
-            const diff = finalValue - startValue;
-            const duration = isLiveUpdate ? 750 : 1400;
-            const startTime = performance.now();
-
-            function step(now) {
-
-                const elapsed = now - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 4);
-
-                const current = Math.round(startValue + diff * eased);
-
-                displayedDownloads = current;
-
-                totalDownloadsCountEl.textContent = current.toLocaleString('en-US');
-
-                if (progress < 1) {
-
-                    counterAnimFrame = requestAnimationFrame(step);
-
-                } else {
-
-                    displayedDownloads = finalValue;
-
-                    totalDownloadsCountEl.textContent = finalValue.toLocaleString('en-US');
-
-                    counterAnimFrame = null;
-
-                }
-
-            }
-
-            counterAnimFrame = requestAnimationFrame(step);
-
+    function hydrateFromCache() {
+      try {
+        const cached = JSON.parse(localStorage.getItem(CACHE_KEY_STATE) || "null");
+        if (cached && typeof cached === "object") {
+          applyReleaseState(cached, false);
+          hasRenderedInitial = true;
+          return true;
         }
-
-        function calculateTotalDownloads(releases) {
-
-            if (!Array.isArray(releases)) return 0;
-
-            return releases.reduce((total, rel) => {
-
-                if (!rel || !Array.isArray(rel.assets)) return total;
-
-                const relSum = rel.assets.reduce((sum, asset) => {
-
-                    return sum + (
-                        asset && typeof asset.download_count === 'number'
-                            ? asset.download_count
-                            : 0
-                    );
-
-                }, 0);
-
-                return total + relSum;
-
-            }, 0);
-
-        }
-
-        function applyReleaseState(state, isLiveUpdate = false) {
-
-            if (!state) return;
-
-            if (typeof state.totalDownloads === 'number') {
-                animateDownloadCounter(state.totalDownloads, isLiveUpdate);
-            }
-
-            if (state.latest) {
-
-                if (downloadBtnVersion && state.latest.version) {
-                    downloadBtnVersion.textContent = state.latest.version;
-                }
-
-                if (downloadBtn && state.latest.url) {
-
-                    downloadBtn.href = state.latest.url;
-
-                    if (state.latest.filename) {
-                        downloadBtn.setAttribute('download', state.latest.filename);
-                    }
-
-                }
-
-                if (versionMeta) {
-
-                    versionMeta.textContent = state.latest.sizeText
-                        ? `Android APK • ${state.latest.sizeText}`
-                        : "Android APK • Latest Release";
-
-                }
-
-            }
-
-        }
-
-        function hydrateFromCache() {
-
-            try {
-
-                const cached = JSON.parse(localStorage.getItem(CACHE_KEY_STATE) || 'null');
-
-                if (cached && typeof cached === 'object') {
-
-                    applyReleaseState(cached, false);
-
-                    hasRenderedInitial = true;
-
-                    return true;
-
-                }
-
-            } catch (e) {}
-
-            return false;
-
-        }
-
-        function fetchReleasesData() {
-
-            if (isFetchingReleases) return;
-
-            isFetchingReleases = true;
-
-            fetch(RELEASES_API_URL, { cache: 'no-cache' })
-
-                .then(response => {
-
-                    if (!response.ok) throw new Error('Releases fetch failed');
-
-                    return response.json();
-
-                })
-
-                .then(releases => {
-
-                    const validReleases = (Array.isArray(releases) ? releases : [])
-                        .filter(r => r && !r.draft && !r.prerelease);
-
-                    const totalDownloads = calculateTotalDownloads(validReleases);
-
-                    const apkReleases = validReleases
-
-                        .filter(rel =>
-                            Array.isArray(rel.assets) &&
-                            rel.assets.some(a =>
-                                a && a.name && a.name.toLowerCase().endsWith('.apk')
-                            )
-                        )
-
-                        .sort((a, b) => compareVersions(b.tag_name, a.tag_name));
-
-                    let latestState = null;
-
-                    if (apkReleases.length > 0) {
-
-                        const latestRel = apkReleases[0];
-
-                        const latestApk = latestRel.assets.find(a =>
-                            a && a.name && a.name.toLowerCase().endsWith('.apk')
-                        );
-
-                        const latestVersion = formatVersion(latestRel.tag_name);
-
-                        latestState = {
-
-                            version: latestVersion,
-
-                            url: latestApk.browser_download_url || fallbackReleasesPage,
-
-                            filename: latestApk.name || `nox_sound_${latestVersion}.apk`,
-
-                            sizeText: formatSizeMb(latestApk.size)
-
-                        };
-
-                    }
-
-                    const newState = {
-                        totalDownloads,
-                        latest: latestState
-                    };
-
-                    try {
-
-                        localStorage.setItem(CACHE_KEY_STATE, JSON.stringify(newState));
-
-                    } catch (e) {}
-
-                    applyReleaseState(newState, hasRenderedInitial);
-
-                    hasRenderedInitial = true;
-
-                })
-
-                .catch(() => {
-
-                    if (!hasRenderedInitial) {
-
-                        downloadBtn.href = fallbackReleasesPage;
-
-                        if (downloadsStatsPill) {
-                            downloadsStatsPill.style.display = 'none';
-                        }
-
-                    }
-
-                })
-
-                .finally(() => {
-
-                    isFetchingReleases = false;
-
-                });
-
-        }
-
-        hydrateFromCache();
-
-        fetchReleasesData();
-
-        setInterval(() => {
-
-            if (!document.hidden) {
-                fetchReleasesData();
-            }
-
-        }, LIVE_POLL_INTERVAL_MS);
-
-        document.addEventListener('visibilitychange', () => {
-
-            if (!document.hidden) {
-                fetchReleasesData();
-            }
-
-        });
-
-        document.addEventListener('click', (e) => {
-
-            const link = e.target.closest('#downloadBtn, .version-dl-btn');
-
-            if (link) {
-
-                setTimeout(() => fetchReleasesData(), 4500);
-
-            }
-
-        });
-
-    </script>
-
+      } catch (e) {}
+      return false;
+    }
+
+    function fetchReleasesData() {
+      if (isFetchingReleases) return;
+      isFetchingReleases = true;
+
+      fetch(RELEASES_API_URL, { cache: "no-cache" })
+        .then((response) => {
+          if (!response.ok) throw new Error("Releases fetch failed");
+          return response.json();
+        })
+        .then((releases) => {
+          const validReleases = (Array.isArray(releases) ? releases : []).filter((r) => r && !r.draft && !r.prerelease);
+          const totalDownloads = calculateTotalDownloads(validReleases);
+          const apkReleases = validReleases
+            .filter((rel) => Array.isArray(rel.assets) && rel.assets.some((a) => a && a.name && a.name.toLowerCase().endsWith(".apk")))
+            .sort((a, b) => compareVersions(b.tag_name, a.tag_name));
+
+          let latestState = null;
+          if (apkReleases.length > 0) {
+            const latestRel = apkReleases[0];
+            const latestApk = latestRel.assets.find((a) => a && a.name && a.name.toLowerCase().endsWith(".apk"));
+            const latestVersion = formatVersion(latestRel.tag_name);
+            latestState = {
+              version: latestVersion,
+              url: latestApk.browser_download_url || fallbackReleasesPage,
+              filename: latestApk.name || `nox_sound_${latestVersion}.apk`,
+              sizeText: formatSizeMb(latestApk.size)
+            };
+          }
+
+          const newState = { totalDownloads, latest: latestState };
+          try { localStorage.setItem(CACHE_KEY_STATE, JSON.stringify(newState)); } catch (e) {}
+          applyReleaseState(newState, hasRenderedInitial);
+          hasRenderedInitial = true;
+        })
+        .catch(() => {
+          if (!hasRenderedInitial) {
+            downloadBtn.href = fallbackReleasesPage;
+            if (downloadsStatsPill) downloadsStatsPill.style.display = "none";
+          }
+        })
+        .finally(() => { isFetchingReleases = false; });
+    }
+
+    hydrateFromCache();
+    fetchReleasesData();
+
+    setInterval(() => { if (!document.hidden) fetchReleasesData(); }, LIVE_POLL_INTERVAL_MS);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) fetchReleasesData(); });
+    document.addEventListener("click", (e) => {
+      if (e.target.closest("#downloadBtn, .version-dl-btn")) setTimeout(() => fetchReleasesData(), 4500);
+    });
+  </script>
 </body>
 </html>
